@@ -6,7 +6,6 @@
   },
   "main": "index.js",
   "bin": "cli.js",
-  "private": true,
   "scripts": {
     "test:lint": "standard cli.js index.js test/index.js",
     "test": "mocha -u tdd --reporter spec && standard cli.js index.js test/index.js"
