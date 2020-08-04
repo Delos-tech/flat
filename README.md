@@ -3,10 +3,14 @@
 Take a nested Javascript object and flatten it, or unflatten an object with
 delimited keys.
 
+This is a custom Delos repository for the moment, largely due to packaging concerns
+and immediate need. A PR has been filed for the *main* project but it has not been 
+merged yet.
+
 ## Installation
 
 ``` bash
-$ npm install flat
+$ npm install @delos-tech/flat
 ```
 
 ## Methods
@@ -17,7 +21,7 @@ Flattens the object - it'll return an object one level deep, regardless of how
 nested the original object was:
 
 ``` javascript
-var flatten = require('flat')
+var flatten = require('@delos-tech/flat')
 
 flatten({
     key1: {
@@ -41,7 +45,7 @@ flatten({
 Flattening is reversible too, you can call `flatten.unflatten()` on an object:
 
 ``` javascript
-var unflatten = require('flat').unflatten
+var unflatten = require('@delos-tech/flat').unflatten
 
 unflatten({
     'three.levels.deep': 42,
@@ -140,7 +144,7 @@ This only makes sense on ordered arrays, and since we're overwriting data, shoul
 Maximum number of nested objects to flatten.
 
 ``` javascript
-var flatten = require('flat')
+var flatten = require('@delos-tech/flat')
 
 flatten({
     key1: {
@@ -164,8 +168,8 @@ flatten({
 Transform each part of a flat key before and after flattening. 
 
 ```javascript
-var flatten = require('flat')
-var unflatten = require('flat').unflatten
+var flatten = require('@delos-tech/flat')
+var unflatten = require('@delos-tech/flat').unflatten
 
 flatten({
     key1: {
@@ -217,8 +221,8 @@ Transforms the top-level key before and after flattening. It has two arguments:
 add a new key to the transformation.
 
 ```javascript
-var flatten = require('flat')
-var unflatten = require('flat').unflatten
+var flatten = require('@delos-tech/flat')
+var unflatten = require('@delos-tech/flat').unflatten
 
 flatten({
     key1: {
